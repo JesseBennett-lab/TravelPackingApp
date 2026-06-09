@@ -1,5 +1,6 @@
 package com.example.travelpackingapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,6 +10,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    val itemNames = mutableListOf<String>()
+    val itemQuantity =  mutableListOf<Int>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,15 +23,31 @@ class MainActivity : AppCompatActivity() {
         val exitButton = findViewById<Button>(R.id.exitButton)
         val saveButton = findViewById<Button>(R.id.saveButton)
         val nameEditText = findViewById<EditText>(R.id.nameEditText)
-        val quantityText = findViewById<EditText>(R.id.quantityEditText)
+        val quantityEditText = findViewById<EditText>(R.id.quantityEditText)
 
-        addButton.setOnClcikListener {
-            
-
+        addButton.setOnClickListener {
+            nameEditText.visibility = android.view.View.VISIBLE
+            quantityEditText.visibility = android.view.View.VISIBLE
         }
 
+        saveButton.setOnClickListener {
+            val name = nameEditText.toString()
+            val quantity = quantityEditText.toString().toInt()
 
+            itemNames.add(name)
+            itemQuantity.add(quantity)
+        }
 
+        nextButton.setOnClickListener {
+            val intent = Intent(this, DisplayScreen::class.java)
+            intent.putExtra("itemNames", ArrayList(itemNames))
+            intent.putExtra("itemQuantity",ArrayList(itemQuantity))
+            startActivity(intent)
+        }
+
+        exitButton.setOnClickListener {
+            finish()
+        }
 
 
 

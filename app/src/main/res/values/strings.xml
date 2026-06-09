@@ -7,4 +7,5 @@
     <string name="enter_item_quantity">Enter item quantity</string>
     <string name="save">Save</string>
     <string name="travel_packing">Travel Packing</string>
+    <string name="back">Back</string>
 </resources>
