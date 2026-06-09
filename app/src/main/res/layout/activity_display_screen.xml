@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ACCCD1"
     tools:context=".DisplayScreen">
 
     <TextView
@@ -15,7 +16,8 @@
         android:layout_marginTop="58dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="180dp"
-        android:textSize="16sp"
+        android:background="#DC011061"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +31,7 @@
         android:layout_marginTop="615dp"
         android:layout_marginEnd="107dp"
         android:layout_marginBottom="62dp"
+        android:backgroundTint="#A203146D"
         android:text="@string/back"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
             itemNames.add(name)
             itemQuantity.add(quantity)
 
-            itemNames.clear()
-            itemQuantity.clear()
+            nameEditText.text.clear()
+            quantityEditText.text.clear()
         }
 
         nextButton.setOnClickListener {
