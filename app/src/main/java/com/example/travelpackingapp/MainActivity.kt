@@ -31,11 +31,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         saveButton.setOnClickListener {
-            val name = nameEditText.toString()
-            val quantity = quantityEditText.toString().toInt()
+            val name = nameEditText.text.toString()
+            val quantity = quantityEditText.text.toString().toInt()
 
             itemNames.add(name)
             itemQuantity.add(quantity)
+
+            itemNames.clear()
+            itemQuantity.clear()
         }
 
         nextButton.setOnClickListener {
