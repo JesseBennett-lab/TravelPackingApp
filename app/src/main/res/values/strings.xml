@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TravelPackingApp</string>
+    <string name="add_to_packing_list">Add To Packing List</string>
+    <string name="exit">Exit</string>
+    <string name="enter_item_name">Enter item name</string>
+    <string name="next">Next</string>
+    <string name="enter_item_quantity">Enter item quantity</string>
+    <string name="save">Save</string>
+    <string name="travel_packing">Travel Packing</string>
 </resources>
